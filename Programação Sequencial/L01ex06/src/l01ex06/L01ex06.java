@@ -22,16 +22,16 @@ public class L01ex06 {
         double x1,y1,x2,y2,d,d2,d3;
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("Digite a nota da x1: ");
+        System.out.println("Ponto x1: ");
         x1 = sc.nextDouble();
         
-        System.out.println("Digite a nota da y1: ");
+        System.out.println("Ponto y1: ");
         y1 = sc.nextDouble();
         
-        System.out.println("Digite a nota da x2: ");
+        System.out.println("Ponto x2: ");
         x2 = sc.nextDouble();
       
-        System.out.println("Digite a nota da y1: ");
+        System.out.println("Ponto y1: ");
         y2 = sc.nextDouble();
         
         d2 = Math.pow (x2-x1,2);
