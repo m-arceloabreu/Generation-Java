@@ -18,6 +18,8 @@ public class PooL01ex01 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        
         Cliente cli = new Cliente();
         Scanner sc = new Scanner(System.in);
         
@@ -27,7 +29,6 @@ public class PooL01ex01 {
         cli.idade = sc.nextInt();
         System.out.println("Digite seu cpf: ");
         cli.cpf = sc.next();
-        
         
         
         cli.getInfo();
