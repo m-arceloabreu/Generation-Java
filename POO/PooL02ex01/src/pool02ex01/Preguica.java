@@ -11,9 +11,13 @@ package pool02ex01;
  */
 public class Preguica extends Animal {
 
+  public void som(){
+      super.som();
+      System.out.println("Som de preguiça");
   
+  }
     public void subir(){
-        System.out.println("O animal sobe em arvore: ");
+        System.out.println("O animal sobe em arvore. ");
         
     }
     

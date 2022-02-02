@@ -12,6 +12,11 @@ package pool02ex01;
 public class Cachorro extends Animal {
     
     
+    
+    public void som(){
+    super.som();
+        System.out.println("Latindo");
+    }
   public void correr(){
       System.out.println("Animal corre.");
   

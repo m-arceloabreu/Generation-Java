@@ -23,7 +23,7 @@ public class PooL02ex01 {
         doggo.setNome("Jorge");
         doggo.setIdade(15);
         
-        System.out.println("Cavalo\nNome: "+doggo.getNome() +"\nIdade: "+doggo.getIdade());
+        System.out.println("Cachorro\nNome: "+doggo.getNome() +"\nIdade: "+doggo.getIdade());
         doggo.som();
         doggo.correr();
         
@@ -31,17 +31,19 @@ public class PooL02ex01 {
         
         calvo.setNome("Pé de Pano");
         calvo.setIdade(2);
+        System.out.println("Cavalo\nNome: "+calvo.getNome() +"\nIdade: "+calvo.getIdade());
         calvo.som();
         calvo.correr();
-        System.out.println("Preguiça\nNome: "+calvo.getNome() +"\nIdade: "+calvo.getIdade());
+        
         
         Preguica pregui = new Preguica();
         pregui.setNome("Soneca");
         pregui.setIdade(8);
-        pregui.subir();
+        System.out.println("Peguiça\nNome: "+pregui.getNome() +"\nIdade: "+pregui.getIdade());
         pregui.som();
+        pregui.subir();
         
-        System.out.println("Cachorro\nNome: "+pregui.getNome() +"\nIdade: "+pregui.getIdade());
+        
         
         
         

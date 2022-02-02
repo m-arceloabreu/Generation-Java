@@ -11,7 +11,10 @@ package pool02ex01;
  */
 public class Cavalo extends Animal {
 
-  
+  public void som(){
+  super.som();
+      System.out.println("Relinchando");
+  }
     
     
     public void correr(){
