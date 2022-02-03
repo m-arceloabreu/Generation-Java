@@ -15,6 +15,16 @@ public class Sorvete {
     private double valor;
     private String marca;
 
+    public Sorvete(String sabor, int id, double valor, String marca) {
+        this.sabor = sabor;
+        this.id = id;
+        this.valor = valor;
+        this.marca = marca;
+    }
+
+    
+    
+    
     public int getId() {
         return id;
     }
@@ -48,4 +58,8 @@ public class Sorvete {
         this.marca = marca;
     }  
     
+    @Override
+   public String toString(){
+       return "ID-Sorvete: "+ id + " | Sabor: " + sabor + " | Marca: " + marca + " | Valor: R$ "+ valor+ "\n";
+   }
 }

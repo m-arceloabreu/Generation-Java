@@ -16,8 +16,13 @@ public class Funcionario extends Pessoa {
     private String cargo;
     private String cpf;
 
-    public Funcionario(String nome, String telefone, String endereco) {
+    public Funcionario(int id,String cargo,String nome, String telefone, String endereco, String cpf, String sal) {
         super(nome, telefone, endereco);
+        this.id = id;
+        this.cargo = cargo;
+        this.cpf = cpf;
+        this.sal = sal;
+        
     }
 
     public String getSal() {
@@ -51,6 +56,12 @@ public class Funcionario extends Pessoa {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+    
+    
+   public String toString(){
+   
+   return  "ID-Funcionario: "+ id + " | Nome: " + super.getNome() +" | Cargo: "+ cargo + " | Telefone: "+ super.getTelefone() + " | Endereço: "+ super.getEndereco() + " | CPF: "+cpf + " | Salario: R$"+ sal+ "\n";
+   }
     
     
     
