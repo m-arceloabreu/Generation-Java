@@ -14,13 +14,16 @@ import java.util.Scanner;
  * @author marcelo
  */
 public class Cliente extends Pessoa{
-    private int id;
     
-
+    private int id;
+ 
     public Cliente(int id,String nome, String telefone, String endereco) {
         super(nome, telefone, endereco);
         this.id = id;
     }
+
+ 
+    
 
     public int getId() {
         return id;
@@ -29,6 +32,8 @@ public class Cliente extends Pessoa{
     public void setId(int id) {
         this.id = id;
     }
+    
+    
     
     
     public String toString(){

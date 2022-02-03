@@ -5,7 +5,10 @@
  */
 package projetosorveteria;
 
+import static java.nio.file.Files.size;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -25,6 +28,7 @@ public class ProjetoSorveteria {
         
         Cliente cli = new Cliente(0,"","","");
         Sorvete sor = new Sorvete("",0,0,"");
+        Pedido ped = new Pedido(0,"");
       
        do{
         Scanner sc = new Scanner (System.in);
@@ -54,7 +58,9 @@ public class ProjetoSorveteria {
            
             case 4: 
                 System.out.println("Pedido");
-                Pedido();
+                ped.setIdCli(0);
+                ped.nomeCli();
+                ped.Pedidos1();
                 
                 break;
             default: 
@@ -68,14 +74,14 @@ public class ProjetoSorveteria {
     }
       public static void Clientes()
                 {
-                Set<Cliente> clientes = new HashSet<Cliente>();
+                List<Cliente> clientes = new ArrayList<Cliente>();
                 Cliente c1 = new Cliente(1,"Anderson Abreu","4002-8922","Rua Almirante");
                 Cliente c2 = new Cliente(2,"Fernanda Andrade","4003-8933","Alameda X");
-    
                 clientes.add(c1);
+                
                 clientes.add(c2);
                 
-                System.out.println(clientes);
+                System.out.println(clientes +"\n");
     }
      public static void Funcionario(){
       Set<Funcionario> funcs = new HashSet<Funcionario>();
@@ -100,44 +106,8 @@ public class ProjetoSorveteria {
 	System.out.println(sor);
      }
      
-     public static void Pedido(){
-         int cliId= 0, saborId = 0 , funcId = 0, pedNum = 0 , qtSor = 0;
-         double vt = 0;
-         Scanner sc = new Scanner(System.in);
-         Pedido ped = new Pedido(0,0,0,0,0,0);
-         
-         System.out.println("Digite o Numero do Pedido: ");
-         pedNum = sc.nextInt();
-         
-         System.out.println("Digite o ID do Cliente: ");
-         cliId = sc.nextInt();
-         
-         System.out.println("Digite o ID do Funcionario: ");
-         funcId = sc.nextInt();
-         
-         System.out.println("Digite o ID do Sorvete: ");
-         saborId = sc.nextInt();
-         
-         
-         
-         System.out.println("Digite Quantidade do Sorvete: ");
-         qtSor = sc.nextInt();
-         
-
-         
-         
-         Set<Pedido> peds = new HashSet<Pedido>();
-         Pedido p1 = new Pedido(saborId,cliId,funcId,pedNum,qtSor,vt);
-         
-         peds.add(p1);
-         
-         System.out.println(peds);
-         
-         
-         
-         
-     
-     }
+    
     
     
 }
+//clientes.get(1);
