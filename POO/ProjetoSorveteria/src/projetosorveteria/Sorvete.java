@@ -65,8 +65,8 @@ public class Sorvete {
       public static void Sorvete(){
          
 	List<Sorvete> sor = new ArrayList<Sorvete>();
-	Sorvete s1 = new Sorvete ("Chocolate", 0, 5.00, "Nestlé");
-	Sorvete s2 = new Sorvete ("Morango", 1, 500, "Kibon");
+	Sorvete s1 = new Sorvete ("Chocolate", 1, 5.00, "Nestlé");
+	Sorvete s2 = new Sorvete ("Morango", 2, 500, "Kibon");
 	
 	sor.add(s1);
 	sor.add(s2);

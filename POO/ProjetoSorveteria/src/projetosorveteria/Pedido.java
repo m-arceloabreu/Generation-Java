@@ -22,6 +22,7 @@ public class Pedido {
     private double valorTot;
     
     
+    
     String nomeCliente;
     String nomeFunc;
     String sabor;
@@ -119,7 +120,7 @@ public class Pedido {
                 clientes.add(c1);
                 clientes.add(c2);
                 
-       nomeCliente = clientes.get(idCli).getNome();
+       nomeCliente = clientes.get(idCli - 1).getNome();
        
     return nomeCliente;
  }
@@ -131,7 +132,7 @@ public class Pedido {
     
                 funcs.add(f1);
                 funcs.add(f2);
-        nomeFunc = funcs.get(idFunc).getNome();
+        nomeFunc = funcs.get(idFunc -1 ).getNome();
          
       return nomeFunc;  
     }
@@ -143,8 +144,8 @@ public class Pedido {
 	
 	sor.add(s1);
 	sor.add(s2);
-        sabor = sor.get(idSor).getSabor();
-        valor = sor.get(idSor).getValor();
+        sabor = sor.get(idSor - 1).getSabor();
+        valor = sor.get(idSor - 1).getValor();
     return valor;
     }
     

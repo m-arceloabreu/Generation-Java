@@ -96,4 +96,3 @@ public class ProjetoSorveteria {
         
     }  
 }
-//clientes.get(1);

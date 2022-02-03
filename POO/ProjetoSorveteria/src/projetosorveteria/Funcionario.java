@@ -62,8 +62,8 @@ public class Funcionario extends Pessoa {
     
     public static void Funcionario(){
       List<Funcionario> funcs = new ArrayList<Funcionario>();
-                Funcionario f1 = new Funcionario(0,"Operador de Caixa","Marcelo", "4002-8184","Rua Isso ai","12345678903", "5000");
-                Funcionario f2 = new Funcionario(1,"Gerente","Jamille", "4002-8789","Rua do Conhecimento","12345678902", "10000");
+                Funcionario f1 = new Funcionario(1,"Operador de Caixa","Marcelo", "4002-8184","Rua Isso ai","12345678903", "5000");
+                Funcionario f2 = new Funcionario(2,"Gerente","Jamille", "4002-8789","Rua do Conhecimento","12345678902", "10000");
     
                 funcs.add(f1);
                 funcs.add(f2);
