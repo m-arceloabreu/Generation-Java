@@ -5,6 +5,9 @@
  */
 package projetosorveteria;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author marcelo
@@ -57,6 +60,19 @@ public class Sorvete {
     public void setMarca(String marca) {
         this.marca = marca;
     }  
+    
+    
+      public static void Sorvete(){
+         
+	List<Sorvete> sor = new ArrayList<Sorvete>();
+	Sorvete s1 = new Sorvete ("Chocolate", 0, 5.00, "Nestlé");
+	Sorvete s2 = new Sorvete ("Morango", 1, 500, "Kibon");
+	
+	sor.add(s1);
+	sor.add(s2);
+	
+	System.out.println(sor);
+     }
     
     @Override
    public String toString(){

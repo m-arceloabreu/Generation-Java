@@ -23,6 +23,9 @@ public class Pedido {
     
     
     String nomeCliente;
+    String nomeFunc;
+    String sabor;
+    double valor;
 
     public Pedido(int idSor, int idCli, int idFunc, int numPed, int qtdSorvete, double valorTot) {
         this.idSor = idSor;
@@ -33,9 +36,13 @@ public class Pedido {
         this.valorTot = valorTot;
     }
 
-    public Pedido(int idCli, String nomeCliente) {
-        this.idCli = idCli;
+    public Pedido(String nomeFunc, String nomeCliente,String sabor, double valor, int qtdSorvete,double valorTot) {
+        this.nomeFunc = nomeFunc;
         this.nomeCliente = nomeCliente;
+        this.sabor =  sabor;
+        this.valor = valor;
+        this.qtdSorvete = qtdSorvete;
+        this.valorTot = valorTot;
     }
     
     
@@ -55,12 +62,7 @@ public class Pedido {
         return idCli;
     }
 
-    public void setIdCli(int idCli) {
-       
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Digite o Id do Cliente");
-        idCli = sc.nextInt();
-        
+    public void setIdCli(int idCli) { 
         this.idCli = idCli;
     }
 
@@ -94,9 +96,6 @@ public class Pedido {
     }
 
     public void setQtdSorvete(int qtdSorvete) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Quantidade: ");
-        qtdSorvete = sc.nextInt();
         this.qtdSorvete = qtdSorvete;
     }
 
@@ -108,24 +107,59 @@ public class Pedido {
         this.valorTot = valorTot;
     }
   
-    public String toString(){
-    
-    return "Id-Cliente: "+ nomeCliente +"\n";
-    }
+  
     
 
- public String nomeCli(){
-        if(idCli == (cli.getId())){
-        
-            nomeCliente = cli.getNome();
-        
-        }
+ public String nomeCli(int idCli){
+            List<Cliente> clientes = new ArrayList<Cliente>();
+                Cliente c1 = new Cliente(1,"Anderson Abreu","4002-8922","Rua Almirante");
+                Cliente c2 = new Cliente(2,"Fernanda Andrade","4003-8933","Alameda X");
+                
+                
+                clientes.add(c1);
+                clientes.add(c2);
+                
+       nomeCliente = clientes.get(idCli).getNome();
+       
     return nomeCliente;
  }
+ 
+    public String nomeFunc(int idFunc){
+        List<Funcionario> funcs = new ArrayList<Funcionario>();
+                Funcionario f1 = new Funcionario(1,"Operador de Caixa","Marcelo", "4002-8184","Rua Isso ai","12345678903", "5000");
+                Funcionario f2 = new Funcionario(2,"Gerente","Jamille", "4002-8789","Rua do Conhecimento","12345678902", "10000");
+    
+                funcs.add(f1);
+                funcs.add(f2);
+        nomeFunc = funcs.get(idFunc).getNome();
+         
+      return nomeFunc;  
+    }
+    
+    public double Sabor (int idSor){
+        List<Sorvete> sor = new ArrayList<Sorvete>();
+	Sorvete s1 = new Sorvete ("Chocolate", 1, 5.00, "Nestlé");
+	Sorvete s2 = new Sorvete ("Morango", 2, 500, "Kibon");
+	
+	sor.add(s1);
+	sor.add(s2);
+        sabor = sor.get(idSor).getSabor();
+        valor = sor.get(idSor).getValor();
+    return valor;
+    }
+    
+    
+    public String toString(){
+    
+    return "----------PEDIDO----------\n"+"Cliente: "+ nomeCliente +"\nFuncionario: "+ nomeFunc +"\nSabor: "+sabor+" | R$: "+valor+"\nTotal: R$ "+valorTot;
+    }
     
     public void Pedidos1 (){
+        
+        valorTot = valor *qtdSorvete;
+        
     List<Pedido> pedidos = new ArrayList<Pedido>();
-        Pedido p1 = new Pedido(idCli,nomeCliente);
+        Pedido p1 = new Pedido(nomeFunc,nomeCliente,sabor,valor,qtdSorvete,valorTot);
         pedidos.add(p1);
         System.out.println(p1);
     }

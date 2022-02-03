@@ -5,6 +5,8 @@
  */
 package projetosorveteria;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -33,6 +35,22 @@ public class Cliente extends Pessoa{
         this.id = id;
     }
     
+    
+    
+     public static void Clientes()
+                {
+                List<Cliente> clientes = new ArrayList<Cliente>();
+                Cliente c1 = new Cliente(0,"Anderson Abreu","4002-8922","Rua Almirante");
+                Cliente c2 = new Cliente(1,"Fernanda Andrade","4003-8933","Alameda X");
+                
+              
+                clientes.add(c1);
+                clientes.add(c2);
+               
+                
+                System.out.println(clientes +"\n");
+    }
+       
     
     
     
