@@ -87,7 +87,7 @@ public class ProjetoSorveteria {
             default: 
                 
                 
-                System.out.println("ERRO, DIGITE NOVAMENTE");
+                System.out.println("----ERRO, DIGITE NOVAMENTE----\n--------------------");
                 escolha = 1;
                break;
         }
