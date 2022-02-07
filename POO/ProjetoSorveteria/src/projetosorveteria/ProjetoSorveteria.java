@@ -71,7 +71,7 @@ public class ProjetoSorveteria {
                 System.out.println("---Funcionarios Cadastrados---");
                 int f;
                      System.out.println(func.funcs + "\n");
-                    System.out.println("1- INSERIR CLIENTE \n2-VOLTAR");
+                    System.out.println("1- INSERIR FUNCIONARIO \n2-VOLTAR");
                     f = sc.nextInt();
                       if (f == 1) {
                        func.inserirFunc();
