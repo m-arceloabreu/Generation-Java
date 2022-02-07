@@ -7,6 +7,7 @@ package projetosorveteria;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  *
@@ -62,17 +63,36 @@ public class Sorvete {
     }  
     
     List<Sorvete> sor = new ArrayList<Sorvete>();
+    
       public  void Sorvete(){
          
 	
 	Sorvete s1 = new Sorvete ("Chocolate", 1, 5.00, "Nestlé");
 	Sorvete s2 = new Sorvete ("Morango", 2, 15, "Kibon");
-	
+
 	sor.add(s1);
 	sor.add(s2);
 	
-	System.out.println(sor);
      }
+      public void inserirSorvete(){
+          Scanner sc = new Scanner(System.in);
+          
+                      System.out.println("Digite o ID: ");
+                      id = sc.nextInt();
+                      System.out.println("Digite o Sabor: ");
+                      sabor = sc.next();
+                      System.out.println("Digite o Valor: ");
+                      valor = sc.nextInt();
+                      System.out.println("Digite a MARCA: ");
+                      marca = sc.next();
+                      
+                      sor.add(new Sorvete(sabor,id,valor,marca));
+                      
+                      System.out.println(sor);
+                }
+      
+      
+      
     
     @Override
    public String toString(){

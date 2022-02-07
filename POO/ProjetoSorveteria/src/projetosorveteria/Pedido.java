@@ -113,39 +113,22 @@ public class Pedido {
   
     
 
- public String nomeCli(int idCli){
-            List<Cliente> clientes = new ArrayList<Cliente>();
-                Cliente c1 = new Cliente(1,"Anderson Abreu","4002-8922","Rua Almirante");
-                Cliente c2 = new Cliente(2,"Fernanda Andrade","4003-8933","Alameda X");
-                
-                
-                clientes.add(c1);
-                clientes.add(c2);
-                
+ public String nomeCli(int idCli,ArrayList<Cliente> clientes){
+    
        nomeCliente = clientes.get(idCli - 1).getNome();
        
     return nomeCliente;
  }
  
-    public String nomeFunc(int idFunc){
-        List<Funcionario> funcs = new ArrayList<Funcionario>();
-            Funcionario f1 = new Funcionario(1,"Operador de Caixa","Marcelo", "4002-8184","Rua Isso ai","12345678903", "5000");
-            Funcionario f2 = new Funcionario(2,"Gerente","Jamille", "4002-8789","Rua do Conhecimento","12345678902", "10000");
-    
-            funcs.add(f1);
-            funcs.add(f2);
+    public String nomeFunc(int idFunc,ArrayList<Funcionario> funcs){
+        
             nomeFunc = funcs.get(idFunc -1 ).getNome();
          
       return nomeFunc;  
     }
    
-    public double Sabor (int idSor){
-        List<Sorvete> sor = new ArrayList<Sorvete>();
-            Sorvete s1 = new Sorvete ("Chocolate", 1, 5.00, "Nestlé");
-            Sorvete s2 = new Sorvete ("Morango", 2, 15, "Kibon");
-	
-            sor.add(s1);
-            sor.add(s2);
+    public double Sabor (int idSor, ArrayList<Sorvete> sor){
+                
             sabor = sor.get(idSor - 1).getSabor();
             valor = sor.get(idSor - 1).getValor();
     return valor;
