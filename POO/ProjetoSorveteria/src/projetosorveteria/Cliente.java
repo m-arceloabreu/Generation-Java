@@ -15,10 +15,11 @@ import java.util.Scanner;
  *
  * @author marcelo
  */
+
 public class Cliente extends Pessoa{
     
     private int id;
- 
+    
     public Cliente(int id,String nome, String telefone, String endereco) {
         super(nome, telefone, endereco);
         this.id = id;
@@ -36,10 +37,10 @@ public class Cliente extends Pessoa{
     }
     
     
-    
-     public static void Clientes()
+    List<Cliente> clientes = new ArrayList<Cliente>();
+     public  void Clientes()
                 {
-                List<Cliente> clientes = new ArrayList<Cliente>();
+                
                 Cliente c1 = new Cliente(1,"Anderson Abreu","4002-8922","Rua Almirante");
                 Cliente c2 = new Cliente(2,"Fernanda Andrade","4003-8933","Alameda X");
                 

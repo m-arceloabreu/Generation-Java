@@ -27,6 +27,8 @@ public class Pedido {
     String nomeFunc;
     String sabor;
     double valor;
+    
+    
 
     public Pedido(int idSor, int idCli, int idFunc, int numPed, int qtdSorvete, double valorTot) {
         this.idSor = idSor;
@@ -136,11 +138,11 @@ public class Pedido {
          
       return nomeFunc;  
     }
-    
+   
     public double Sabor (int idSor){
         List<Sorvete> sor = new ArrayList<Sorvete>();
             Sorvete s1 = new Sorvete ("Chocolate", 1, 5.00, "Nestlé");
-            Sorvete s2 = new Sorvete ("Morango", 2, 500, "Kibon");
+            Sorvete s2 = new Sorvete ("Morango", 2, 15, "Kibon");
 	
             sor.add(s1);
             sor.add(s2);
@@ -152,17 +154,21 @@ public class Pedido {
     
     public String toString(){
     
-    return "----------PEDIDO----------\n"+"Cliente: "+ nomeCliente +"\nFuncionario: "+ nomeFunc +"\nSabor: "+sabor+" | R$: "+valor+"\nTotal: R$ "+valorTot;
+    return "----------PEDIDO----------\n"+"Cliente: "+ nomeCliente +"\nFuncionario: "+ nomeFunc +"\nSabor: "+sabor+" | R$: "+valor+"  | Qtd: "+qtdSorvete+"\nTotal: R$ "+valorTot+"\n";
     }
     
+    
+      List<Pedido> pedidos = new ArrayList<>();
+      
     public void Pedidos1 (){
-        
+       
         valorTot = valor *qtdSorvete;
         
-    List<Pedido> pedidos = new ArrayList<Pedido>();
-        Pedido p1 = new Pedido(nomeFunc,nomeCliente,sabor,valor,qtdSorvete,valorTot);
-        pedidos.add(p1);
-        System.out.println(p1);
+      
+        pedidos.add(new Pedido(nomeFunc,nomeCliente,sabor,valor,qtdSorvete,valorTot));
+      
+        System.out.println(pedidos);
+        
     }
     
    

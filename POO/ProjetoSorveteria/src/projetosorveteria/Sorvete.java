@@ -61,12 +61,12 @@ public class Sorvete {
         this.marca = marca;
     }  
     
-    
-      public static void Sorvete(){
+    List<Sorvete> sor = new ArrayList<Sorvete>();
+      public  void Sorvete(){
          
-	List<Sorvete> sor = new ArrayList<Sorvete>();
+	
 	Sorvete s1 = new Sorvete ("Chocolate", 1, 5.00, "Nestlé");
-	Sorvete s2 = new Sorvete ("Morango", 2, 500, "Kibon");
+	Sorvete s2 = new Sorvete ("Morango", 2, 15, "Kibon");
 	
 	sor.add(s1);
 	sor.add(s2);

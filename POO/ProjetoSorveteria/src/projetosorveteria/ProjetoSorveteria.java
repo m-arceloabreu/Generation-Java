@@ -8,6 +8,7 @@ package projetosorveteria;
 import static java.nio.file.Files.size;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
@@ -30,7 +31,8 @@ public class ProjetoSorveteria {
         Funcionario func = new Funcionario(0,"","","","","","");
         Sorvete sor = new Sorvete("",0,0,"");
         Pedido ped = new Pedido("","","",0,0,0);
-      
+     
+
        do{
         Scanner sc = new Scanner (System.in);
         System.out.println("SORVETERIA GRUPO 1");
@@ -42,7 +44,6 @@ public class ProjetoSorveteria {
         sel = sc.nextInt();
         escolha = 0;
         switch(sel){
-             
             case 1:
                 System.out.println("---Clientes Cadastrados---");
                   cli.Clientes();
@@ -61,6 +62,7 @@ public class ProjetoSorveteria {
                 break;
            
             case 4: 
+                try{
                 int idCli,idFunc,sabor;
                 System.out.println("---Pedido---");
                   
@@ -78,10 +80,17 @@ public class ProjetoSorveteria {
                 
                 System.out.println("Quantidade: ");
                 ped.setQtdSorvete(sc.nextInt());
-                
+             
                 ped.Pedidos1();
+                escolha = 1;
                 
-
+                }catch(IndexOutOfBoundsException e){
+                    System.out.println("    ----ERRO!!!----\nID- Não Encontrado!!!\nDIGITE UM NUMERO DE ID JÁ CADASTRADO!!;");
+                    escolha = 1;
+                }catch(InputMismatchException e){
+                    System.out.println("    ----ERRO!!!----\nFormato de ID não valido!\nDIGITE UM NUMERO DE ID JÁ CADASTRADO!!");
+                    escolha = 1;
+                }
                 
                 break;
             default: 
@@ -91,8 +100,8 @@ public class ProjetoSorveteria {
                 escolha = 1;
                break;
         }
-       }while(escolha == 1);
-                   
-        
-    }  
+       }while(escolha == 1); 
+
+    } 
 }
+
